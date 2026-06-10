@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#ece5de;
+    color:#222;
+}
+
+/* Top Section */
+.container{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:70px 8%;
+    flex-wrap:wrap;
+}
+
+.image img{
+    width:420px;
+    height:420px;
+    object-fit:cover;
+    border-radius:50%;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.content{
+    max-width:500px;
+}
+
+.content h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.content h3{
+    color:#555;
+    margin-bottom:25px;
+}
+
+.content p{
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* Bottom Section */
+.bottom{
+    background:#171312;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:70px 8%;
+    flex-wrap:wrap;
+}
+
+.box{
+    width:45%;
+}
+
+.box h2{
+    margin-bottom:30px;
+    font-size:38px;
+}
+
+.box h3{
+    margin-top:25px;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+.box p{
+    color:#ddd;
+    line-height:1.8;
+    font-size:18px;
+}
+
+/* Contact Section */
+.contact{
+    padding:70px 8%;
+    background:white;
+}
+
+.contact h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:45px;
+}
+
+.contact-details{
+    text-align:center;
+    font-size:22px;
+    line-height:2;
+}
+
+/* Quotes Section */
+.quote{
+    background:#d9d1c8;
+    padding:70px;
+    text-align:center;
+}
+
+.quote h2{
+    margin-bottom:25px;
+    font-size:40px;
+}
+
+.quote p{
+    font-size:24px;
+    line-height:1.8;
+    font-style:italic;
+}
+
+/* Button */
+button{
+    margin-top:30px;
+    padding:15px 35px;
+    border:none;
+    background:black;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:8px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#444;
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+.container{
+    flex-direction:column;
+    text-align:center;
+}
+
+.content h1{
+    font-size:45px;
+}
+
+.image img{
+    width:300px;
+    height:300px;
+    margin-bottom:30px;
+}
+
+.box{
+    width:100%;
+    margin-bottom:40px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<!-- Top -->
+<section class="container">
+
+<div class="image">
+<img src="photo.jpeg" alt="">
+</div>
+
+<div class="content">
+<h1>Priyanshu Kumar Pandey</h1>
+
+<h3>Student | Web Developer | Learner</h3>
+
+<p>
+I am passionate about web development and continuously improving my technical skills.
+I enjoy creating responsive websites using HTML, CSS and JavaScript and aspire to build professional digital solutions.
+</p>
+
+<button onclick="showMessage()">Click It After Checking The Whole Page</button>
+
+</div>
+
+</section>
+
+<!-- Bottom -->
+<section class="bottom">
+
+<div class="box">
+
+<h2>Work Experience</h2>
+
+<h3>Frontend Development</h3>
+
+<p>
+Developed interactive websites and portfolio projects using HTML, CSS and JavaScript.
+</p>
+
+<h3>Project Experience</h3>
+
+<p>
+Created quiz applications, portfolio websites, educational websites and responsive user interfaces.
+</p>
+
+<h3>Skills</h3>
+
+<p>
+HTML<br>
+CSS<br>
+JavaScript<br>
+Responsive Design<br>
+Problem Solving
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h2>Professional Highlights</h2>
+
+<p>
+Dedicated to continuous learning and professional growth.
+</p>
+
+<p>
+Strong interest in web development and modern technologies.
+</p>
+
+<p>
+Focused on creating clean, user-friendly and attractive websites.
+</p>
+
+<h2 style="margin-top:40px;">Favorite Quote</h2>
+
+<p>
+"Success is not final, failure is not fatal: it is the courage to continue that counts."
+</p>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section class="contact">
+
+<h2>Contact Information</h2>
+
+<div class="contact-details">
+
+📧 Email: raghavkumarpandey813@gmail.com<br>
+
+📱 Mobile: +91 82923 14220<br>
+
+📍 Location: India<br>
+
+💼 Profession: Student & Web Developer<br>
+
+🌐 Languages: English, Hindi
+
+</div>
+
+</section>
+
+<!-- Quotes -->
+<section class="quote">
+
+<h2>Professional Quotes</h2>
+
+<p id="quotes">
+"Dream big, work hard, and stay consistent."
+</p>
+
+</section>
+
+<script>
+
+let quotes = [
+"Dream big, work hard, and stay consistent.",
+"Success comes to those who never stop learning.",
+"Your future is created by what you do today.",
+"Consistency beats talent when talent doesn't work hard."
+];
+
+let index = 0;
+
+setInterval(() => {
+index++;
+if(index >= quotes.length){
+index = 0;
+}
+document.getElementById("quotes").innerHTML = quotes[index];
+},3000);
+
+function showMessage(){
+alert("Thank you for visiting my portfolio!");
+}
+
+</script>
+
+</body>
+</html>
